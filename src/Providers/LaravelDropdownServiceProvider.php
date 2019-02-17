@@ -13,7 +13,8 @@ class LaravelDropdownServiceProvider extends ServiceProvider
      */
     
     public function boot(){
-        echo ("this is from obiefy, thanks god");
+        
+        
     }
 
     /**
@@ -23,6 +24,11 @@ class LaravelDropdownServiceProvider extends ServiceProvider
      */
     
     public function register(){
-
+        // register configuration file
+        $this->publishes([
+            
+            __DIR__.'/../config/laravel-dropdown.php' => config_path('laravel-dropdown.php'),
+        ]);
+        // $this->mergeConfigFrom(__DIR__ . '/../config/laravel-dropdown.php', 'laravel-dropdown');
     }
 }
