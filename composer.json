@@ -1,6 +1,6 @@
 {
     "name": "obiefy/laravel-dropdown",
-    "description": "laravel dropdown package",
+    "description": "Laravel Dropdown Package It will be easy to create select menus for your laravel application.",
     "type": "project",
     "require": {
         "illuminate/support": "^5.9@dev",
