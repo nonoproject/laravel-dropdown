@@ -11,7 +11,6 @@ class LaravelDropdownServiceProvider extends ServiceProvider
      * 
      * @return void
      */
-    
     public function boot(){
         
         
@@ -22,15 +21,17 @@ class LaravelDropdownServiceProvider extends ServiceProvider
      * 
      * @return void
      */
-    
     public function register(){
         // register configuration file
         $this->publishes([
             
             __DIR__.'/../config/laravel-dropdown.php' => config_path('laravel-dropdown.php'),
-        ]);
+        ], 'laravel-dropdown');
         
-        // Load package routes
+        // register package routes
         $this->loadRoutesFrom(__DIR__ . '/../routes.php');
+
+        // register migrations
+        $this->loadMigrationsFrom(__DIR__ . "/../migrations");
     }
 }
