@@ -29,6 +29,8 @@ class LaravelDropdownServiceProvider extends ServiceProvider
             
             __DIR__.'/../config/laravel-dropdown.php' => config_path('laravel-dropdown.php'),
         ]);
-        // $this->mergeConfigFrom(__DIR__ . '/../config/laravel-dropdown.php', 'laravel-dropdown');
+        
+        // Load package routes
+        $this->loadRoutesFrom(__DIR__ . '/../routes.php');
     }
 }
